@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color="customOrange">
+    <ion-title  color="light" class="ion-text-center">
+      Calcule ton IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-grid class="ion-text-center">
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          Utilise notre algorithme pour une analyse et des conseils personalisés !
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <ion-label for="poids" >Poids</ion-label>
+          <ion-input
+            id="poids"
+            type="number"
+            placeholder="Ton poid (en kg)"
+            [(ngModel)]="poids"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <ion-label for="taille" >Taille</ion-label>
+          <ion-input
+            id="taille"
+            type="number"
+            placeholder="Ta taille (en m)"
+            [(ngModel)]="taille"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <ion-button (click)="onCalcul()" color="customOrange">
+            <ion-icon name="search" color="light"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-card>
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col class="ion-align-items-center">
+          <ion-button [routerLink]="['/home']" color="light">
+            <ion-icon name="home" color="customOrange"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-Row>
+        <ion-col class="ion-align-items-center">
+          Tous droits reservés - ©JulieNobody - 2022
+        </ion-col>
+      </ion-Row>
+    </ion-grid>
+  </ion-card>
+</ion-footer>
+
+

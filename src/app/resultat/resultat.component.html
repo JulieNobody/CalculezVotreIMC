@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color="customOrange">
+    <ion-title  color="light" class="ion-text-center">
+      Calcule ton IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- ////////// CARD ERREUR  ////////// -->
+  <ion-card class="{{erreur.visibility}}" >
+    <ion-grid class="ion-text-center">
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          {{erreur.text}}
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <ion-button [routerLink]="['/home']" color="light">
+            <ion-icon name="home" color="customOrange"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- ////////// CARD ERREUR  ////////// -->
+  <ion-card class="{{reponse.visibility}}" >
+    <ion-grid class="ion-text-center">
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <h3>Ton IMC est de {{reponse.imc}}.</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          Tu es donc {{reponse.tranche}} !
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <h4>Notre conseil :</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          <ion-icon name="{{reponse.conseilIcon}}" color="customOrange" size="large"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col class="ion-align-items-center">
+          {{reponse.conseil}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-card>
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col class="ion-align-items-center">
+          <ion-button [routerLink]="['/home']" color="light">
+            <ion-icon name="home" color="customOrange"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-Row>
+        <ion-col class="ion-align-items-center">
+          Tous droits reservés - ©JulieNobody - 2022
+        </ion-col>
+      </ion-Row>
+    </ion-grid>
+</ion-card>
+</ion-footer>
